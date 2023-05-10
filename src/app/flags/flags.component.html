@@ -1,0 +1,25 @@
+<app-filter 
+(searchTextChanged)="onSearchTextEntered($event)"
+(regionChanged)="onRegionEntered($event)"
+></app-filter>
+
+<div class="wrapper">
+  <div *ngFor="let item of flags" >
+    <div *ngIf="regionText==='All' || item.region.includes(regionText)">
+      <div *ngIf="searchText === '' || item.name.toLowerCase().includes(searchText)" >
+         <div class="card">
+          <img [src]=item.flags.svg alt="">
+          <p class="country-name">{{item.name}}</p>
+          <p>Region: {{item.region}}</p>
+          <p>Populaiton: {{item.population}}</p>
+          <p>Capital: {{item.capital}}</p>
+        
+        </div>
+      </div>
+     
+    </div>
+    
+    
+  </div>
+</div>
+

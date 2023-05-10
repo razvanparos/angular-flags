@@ -1,0 +1,19 @@
+.header{
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.103);
+}
+
+p{
+    font-weight: 800;
+    font-size: 2rem;
+    
+}
+
+@media (max-width: 458px){
+    p{
+        font-size: 1.4rem;
+    }
+}

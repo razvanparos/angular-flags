@@ -1,0 +1,13 @@
+<div class="filter-div">
+    <div class="search-bar">
+        <img src="../../assets/search-outline.svg" alt="">
+        <input type="text" [(ngModel)]="enteredSearchValue" (input)="onSearchTextChanged()" placeholder="Search for a country...">
+    </div>  
+    <div class="region-filter">
+        <select name="regions" id="regions" [(ngModel)]="selectedRegion" (change)="onSelectedRegion()">
+            <option value="" selected hidden>Filter by Region </option>
+            <option *ngFor="let n of regions">{{n}}</option>
+        </select>
+    
+    </div>
+</div>
